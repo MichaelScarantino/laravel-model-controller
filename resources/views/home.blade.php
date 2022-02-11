@@ -7,6 +7,18 @@
     <title>Homepage</title>
 </head>
 <body>
-    test
+    
+    <h2>Lista Film:</h2>
+
+    @foreach ($movies as $movie)
+    
+        <div>
+            <h2>{{ $movie->title }}</h2>
+            <div>Autore: {{ $movie->nationality }}</div>
+            <div>Data di uscita: {{ $movie->date }}</div>
+            <div>Voto: {{ $movie->vote }}</div>
+        </div>
+    @endforeach
+
 </body>
 </html>
